@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "createbuddycards:asurine_card_stand",
+    "createbuddycards:crimsite_card_stand",
+    "createbuddycards:limestone_card_stand",
+    "createbuddycards:ochrum_card_stand",
+    "createbuddycards:scorchia_card_stand",
+    "createbuddycards:scoria_card_stand",
+    "createbuddycards:veridium_card_stand"
+    ]
+}

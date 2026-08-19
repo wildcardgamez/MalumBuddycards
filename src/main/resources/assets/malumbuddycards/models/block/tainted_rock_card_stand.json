@@ -1,0 +1,7 @@
+{
+  "parent": "buddycards:block/stone_card_stand",
+  "textures": {
+    "0": "malumbuddycards:block/tainted_rock_card_stand",
+    "particle": "malumbuddycards:block/tainted_rock_card_stand"
+  }
+}

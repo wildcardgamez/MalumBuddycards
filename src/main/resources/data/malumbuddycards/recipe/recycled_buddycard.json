@@ -1,0 +1,21 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "createbuddycards:shredded_buddycard"
+    },
+    {
+      "item": "createbuddycards:shredded_buddycard"
+    },
+    {
+      "type": "neoforge:single",
+      "fluid": "minecraft:water",
+      "amount": 125
+    }
+  ],
+  "results": [
+    {
+      "id": "createbuddycards:recycled_buddycard"
+    }
+  ]
+}

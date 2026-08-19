@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "createbuddycards:buddycard_binder_create",
+    "createbuddycards:large_buddycard_binder_create"
+  ]
+}

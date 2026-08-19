@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "malumbuddycards:block/runewood_card_display"
+    },
+    "facing=east": {
+      "model": "malumbuddycards:block/runewood_card_display",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "malumbuddycards:block/runewood_card_display",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "malumbuddycards:block/runewood_card_display",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:leather"
+    },
+    {
+      "tag": "createbuddycards:buddycards_create"
+    },
+    {
+      "tag": "createbuddycards:buddycards_create"
+    },
+    {
+      "tag": "createbuddycards:buddycards_create"
+    }
+  ],
+  "result":
+  {
+    "id": "createbuddycards:buddycard_binder_create",
+    "count": 1
+  }
+}

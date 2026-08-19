@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "malumbuddycards:item/malum_set/large_binder"
+  }
+}

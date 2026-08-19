@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "malumbuddycards:block/twisted_rock_card_stand"
+    },
+    "facing=east": {
+      "model": "malumbuddycards:block/twisted_rock_card_stand",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "malumbuddycards:block/twisted_rock_card_stand",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "malumbuddycards:block/twisted_rock_card_stand",
+      "y": 270
+    }
+  }
+}
