@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "createbuddycards:scorchia_card_stand"
+          "name": "malumbuddycards:tainted_rock_card_stand"
         }
       ],
       "conditions": [

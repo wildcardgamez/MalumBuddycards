@@ -5,25 +5,25 @@
   },
   "ingredients": [
     {
-      "tag": "createbuddycards:buddycards_create",
+      "tag": "malumbuddycards:buddycards_malum",
       "count": 1
     },
     {
-      "tag": "createbuddycards:buddycards_create",
+      "tag": "malumbuddycards:buddycards_malum",
       "count": 1
     },
     {
-      "tag": "createbuddycards:buddycards_create",
+      "tag": "malumbuddycards:buddycards_malum",
       "count": 1
     },
     {
-      "tag": "createbuddycards:buddycards_create",
+      "tag": "malumbuddycards:buddycards_malum",
       "count": 1
     }
   ],
   "output": {
-    "id": "createbuddycards:buddysteel_medal_create",
+    "id": "malumbuddycards:buddysteel_medal_malum",
     "count": 1
   },
-  "set": "create"
+  "set": "malum"
 }

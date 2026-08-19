@@ -2,12 +2,12 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "createbuddycards:buddycard_booster_box_create"
+      "item": "malumbuddycards:buddycard_booster_box_malum"
     }
   ],
   "result":
   {
-    "id": "createbuddycards:buddycard_pack_create",
+    "id": "malumbuddycards:buddycard_pack_malum",
     "count": 6
   }
 }

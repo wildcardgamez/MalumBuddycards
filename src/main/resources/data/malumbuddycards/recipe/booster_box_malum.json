@@ -6,10 +6,10 @@
   ],
   "key": {
     "X": {
-      "item": "createbuddycards:buddycard_pack_create"
+      "item": "malumbuddycards:buddycard_pack_malum"
     }
   },
   "result": {
-    "id": "createbuddycards:buddycard_booster_box_create"
+    "id": "malumbuddycards:buddycard_booster_box_malum"
   }
 }

@@ -10,11 +10,11 @@
       "item": "buddycards:buddysteel_nugget"
     },
     "X": {
-      "tag": "createbuddycards:buddycards_create"
+      "tag": "malumbuddycards:buddycards_malum"
     }
   },
   "result":
   {
-    "id": "createbuddycards:large_buddycard_binder_create"
+    "id": "malumbuddycards:large_buddycard_binder_malum"
   }
 }

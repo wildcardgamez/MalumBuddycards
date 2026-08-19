@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "createbuddycards:ochrum_card_stand"
+          "name": "malumbuddycards:twisted_rock_card_stand"
         }
       ],
       "conditions": [
