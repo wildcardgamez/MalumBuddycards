@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "malumbuddycards:item/childish_spirit"
+    "layer0": "malum:item/spirit_shard"
   }
 }

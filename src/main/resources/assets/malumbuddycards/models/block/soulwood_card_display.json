@@ -1,5 +1,5 @@
 {
-  "parent": "buddycards:block/stone_card_stand",
+  "parent": "buddycards:block/oak_card_display",
   "textures": {
     "0": "malumbuddycards:block/soulwood_card_display",
     "particle": "malumbuddycards:block/soulwood_card_display"

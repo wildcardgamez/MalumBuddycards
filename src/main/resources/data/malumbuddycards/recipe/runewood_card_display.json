@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_card_display",
+  "category": "blocks",
+  "pattern": [
+    "###",
+    " X ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "malum:runewood_planks"
+    }
+  },
+  "result": {
+    "id": "malumbuddycards:runewood_card_display"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "malumbuddycards:block/childish_varnished_terracotta",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "malumbuddycards:block/childish_varnished_terracotta"
+    },
+    "facing=south": {
+      "model": "malumbuddycards:block/childish_varnished_terracotta",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "malumbuddycards:block/childish_varnished_terracotta",
+      "y": 270
+    }
+  }
+}

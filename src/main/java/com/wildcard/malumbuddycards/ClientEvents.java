@@ -1,9 +1,17 @@
 package com.wildcard.malumbuddycards;
 
+import com.sammy.malum.common.data.component.GeasDataComponent;
+import com.sammy.malum.core.systems.geas.GeasEffectType;
+import com.sammy.malum.registry.common.MalumCreativeTabs;
+import com.sammy.malum.registry.common.item.MalumDataComponents;
+import com.sammy.malum.registry.common.item.MalumItems;
+import com.sammy.malum.registry.common.magic.MalumGeasEffectTypes;
 import com.wildcard.buddycards.client.renderer.MedalRenderer;
 import com.wildcard.buddycards.item.BuddycardItem;
 import com.wildcard.buddycards.registries.BuddycardsMisc;
+import net.minecraft.core.component.DataComponentPatch;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -31,6 +39,10 @@ public class ClientEvents {
             for (DeferredHolder<Item, ? extends Item> i : RegistryHandler.ITEMS.getEntries())
                 if(i.get() instanceof BuddycardItem)
                     event.accept(i.get());
+        } else if (event.getTabKey().equals(MalumCreativeTabs.GEAS.getKey())) {
+            for(DeferredHolder<GeasEffectType, ? extends GeasEffectType> geas : RegistryHandler.GEAS.getEntries()) {
+                event.accept(geas.get().getDummyCreativeStack());
+            }
         }
     }
 
