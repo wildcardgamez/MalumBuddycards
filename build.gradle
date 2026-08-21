@@ -129,7 +129,7 @@ dependencies {
     compileOnly "top.theillusivec4.curios:curios-neoforge:${curios_version}:api"
     runtimeOnly "top.theillusivec4.curios:curios-neoforge:${curios_version}"
 
-    implementation("curse.maven:buddycards-425991:8672624")
+    implementation("curse.maven:buddycards-425991:8700645")
     implementation("curse.maven:malum-484064:7307339")
     implementation("curse.maven:lodestone-616457:7264731")
 

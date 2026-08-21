@@ -1,0 +1,6 @@
+{
+  "parent": "buddycards:item/buddycard",
+  "textures": {
+    "layer0": "malumbuddycards:item/rancid_sleeve"
+  }
+}

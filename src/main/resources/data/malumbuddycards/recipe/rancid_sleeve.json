@@ -1,0 +1,27 @@
+{
+  "type": "malum:spirit_infusion",
+  "extraInputs": [
+    {
+      "count": 2,
+      "item": "malum:rotting_essence"
+    }
+  ],
+  "input": {
+    "count": 4,
+    "item": "buddycards:grading_sleeve"
+  },
+  "result": {
+    "count": 4,
+    "id": "malumbuddycards:rancid_sleeve"
+  },
+  "spirits": [
+    {
+      "type": "malumbuddycards:childish",
+      "count": 1
+    },
+    {
+      "type": "malum:wicked",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "type": "malum:soul_binding",
+  "extraInputs": [
+    {
+      "count": 16,
+      "item": "minecraft:lapis_lazuli"
+    },
+    {
+      "count": 16,
+      "item": "buddycards:luminis"
+    },
+    {
+      "count": 8,
+      "item": "buddycards:zylex"
+    }
+  ],
+  "input": {
+    "count": 4,
+    "item": "buddycards:odd_puzzlebox"
+  },
+  "result": "malumbuddycards:pact_of_the_perfectionist",
+  "spirits": [
+    {
+      "type": "malumbuddycards:childish",
+      "count": 32
+    },
+    {
+      "type": "malum:eldritch",
+      "count": 32
+    },
+    {
+      "type": "malum:wicked",
+      "count": 16
+    },
+    {
+      "type": "malum:arcane",
+      "count": 16
+    }
+  ]
+}

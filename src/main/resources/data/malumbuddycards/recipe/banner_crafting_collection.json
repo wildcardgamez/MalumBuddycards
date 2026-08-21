@@ -1,0 +1,23 @@
+{
+  "type": "malum:spirit_infusion",
+  "input": {
+    "count": 1,
+    "item": "malum:soulwoven_banner"
+  },
+  "result": {
+    "components": {
+      "malum:soulwoven_banner_pattern": {
+        "type": "malumbuddycards:collection",
+        "texture": "malumbuddycards:textures/block/banners/soulwoven_banner_collection.png"
+      }
+    },
+    "count": 1,
+    "id": "malum:soulwoven_banner"
+  },
+  "spirits": [
+    {
+      "type": "malumbuddycards:childish",
+      "count": 1
+    }
+  ]
+}

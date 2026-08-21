@@ -1,0 +1,23 @@
+{
+  "type": "malum:spirit_infusion",
+  "extraInputs": [
+    {
+      "count": 1,
+      "item": "malum:alchemical_calx"
+    }
+  ],
+  "input": {
+    "count": 8,
+    "item": "minecraft:terracotta"
+  },
+  "result": {
+    "count": 8,
+    "id": "malumbuddycards:childish_varnished_terracotta"
+  },
+  "spirits": [
+    {
+      "type": "malumbuddycards:childish",
+      "count": 2
+    }
+  ]
+}

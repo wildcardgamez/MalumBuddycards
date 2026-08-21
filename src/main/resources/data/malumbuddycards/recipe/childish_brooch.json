@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "blocks",
+  "pattern": [
+    " # ",
+    "#X#",
+    " Y "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:leather"
+    },
+    "X": {
+      "item": "buddycards:buddysteel_ingot"
+    },
+    "Y": {
+      "item": "buddycards:buddysteel_block"
+    }
+  },
+  "result": {
+    "id": "malumbuddycards:childish_brooch"
+  }
+}

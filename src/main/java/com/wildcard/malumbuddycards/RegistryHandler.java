@@ -70,22 +70,7 @@ public class RegistryHandler {
         SPIRITED_GLASS = BLOCKS.register("childish_spirited_glass", () -> new SpiritedGlassBlock(MalumBlockProperties.SPIRITED_GLASS()));
         VARNISHED_TERRACOTTA = BLOCKS.register("childish_varnished_terracotta", () -> new VarnishedTerracottaBlock(MalumBlockProperties.VARNISHED_TERRACOTTA(DyeColor.LIGHT_BLUE)));
 
-
-        ITEMS.register("childish_ring", () -> new AttributeCurioItem(new Item.Properties().stacksTo(1),
-                (m) -> m.put(CHILDISH_SPOIL, new AttributeModifier(ResourceLocation.fromNamespaceAndPath(Buddycards.MOD_ID, "childish_ring"), 0.25, AttributeModifier.Operation.ADD_VALUE))));
-        ITEMS.register("youthful_spoil_ring", () -> new AttributeCurioItem(new Item.Properties().stacksTo(1),
-                (m) -> m.put(CHILDISH_SPOIL, new AttributeModifier(ResourceLocation.fromNamespaceAndPath(Buddycards.MOD_ID, "youthful_spoil_ring"), 1, AttributeModifier.Operation.ADD_VALUE))));
-        ITEMS.register("childish_brooch", () -> new AttributeCurioItem(new Item.Properties().stacksTo(1), (m) -> {
-                        CuriosApi.addSlotModifier(m, "medal", ResourceLocation.fromNamespaceAndPath(MalumBuddycards.MOD_ID, "childish_brooch"), 2, AttributeModifier.Operation.ADD_VALUE);
-                        CuriosApi.addSlotModifier(m, "belt", ResourceLocation.fromNamespaceAndPath(MalumBuddycards.MOD_ID, "childish_brooch"), -1, AttributeModifier.Operation.ADD_VALUE);
-        }));
-        ITEMS.register("triplicate_brooch", () -> new AttributeCurioItem(new Item.Properties().stacksTo(1), (m) -> {
-            CuriosApi.addSlotModifier(m, "medal", ResourceLocation.fromNamespaceAndPath(MalumBuddycards.MOD_ID, "triplicate_brooch"), 2, AttributeModifier.Operation.ADD_VALUE);
-            m.put(Attributes.MOVEMENT_SPEED, new AttributeModifier(ResourceLocation.fromNamespaceAndPath(MalumBuddycards.MOD_ID, "triplicate_brooch"), -0.04, AttributeModifier.Operation.ADD_VALUE));
-        }));
-
-        SPIRIT = SPIRITS.register("childish_spirit", () -> new SpiritArcanaType(SpiritColorProperties.create(new Color(152, 232, 255), new Color(255, 119, 228)).setItemColor(new Color(152, 232, 255)).build(), SPIRIT_ITEM));
-        SPIRIT_ITEM = ITEMS.register("childish_spirit", () -> new SpiritShardItem(new Item.Properties(), SPIRIT));
+        SPIRIT = SPIRITS.register("childish", () -> new SpiritArcanaType(SpiritColorProperties.create(new Color(152, 232, 255), new Color(255, 119, 228)).setItemColor(new Color(152, 232, 255)).build(), SPIRIT_ITEM));
 
         PACK = ITEMS.register("buddycard_pack_malum", () -> new BuddycardSetPackItem(MALUM_SET, 4, 1, BuddycardsItems.DEFAULT_RARITY_WEIGHTS, BuddycardsItems.DEFAULT_PACK_PROPERTIES));
         BINDER = ITEMS.register("buddycard_binder_malum", () -> new BuddycardBinderItem(BuddycardsItems.DEFAULT_BINDER_PROPERTIES, MALUM_SET, ResourceLocation.fromNamespaceAndPath(MalumBuddycards.MOD_ID, "textures/gui/buddycard_binder_malum.png"), false));
@@ -104,19 +89,36 @@ public class RegistryHandler {
         ITEMS.register("tainted_rock_card_stand", () -> new BlockItem(TAINTED_ROCK_CARD_STAND.get(), BuddycardsItems.DEFAULT_PROPERTIES));
         ITEMS.register("twisted_rock_card_stand", () -> new BlockItem(TWISTED_ROCK_CARD_STAND.get(), BuddycardsItems.DEFAULT_PROPERTIES));
 
+        SPIRIT_ITEM = ITEMS.register("childish_spirit", () -> new SpiritShardItem(new Item.Properties(), SPIRIT));
         ITEMS.register("childish_spirited_glass", () -> new BlockItem(SPIRITED_GLASS.get(), new Item.Properties()));
         ITEMS.register("childish_varnished_terracotta", () -> new BlockItem(VARNISHED_TERRACOTTA.get(), new Item.Properties()));
         SoulwovenBannerPatternDataComponent.register(ResourceLocation.fromNamespaceAndPath(MalumBuddycards.MOD_ID, "collection"));
+
+        ITEMS.register("childish_ring", () -> new AttributeCurioItem(new Item.Properties().stacksTo(1),
+                (m) -> m.put(CHILDISH_SPOIL, new AttributeModifier(ResourceLocation.fromNamespaceAndPath(Buddycards.MOD_ID, "childish_ring"), 0.25, AttributeModifier.Operation.ADD_VALUE))));
+        ITEMS.register("youthful_spoil_ring", () -> new AttributeCurioItem(new Item.Properties().stacksTo(1),
+                (m) -> m.put(CHILDISH_SPOIL, new AttributeModifier(ResourceLocation.fromNamespaceAndPath(Buddycards.MOD_ID, "youthful_spoil_ring"), 1, AttributeModifier.Operation.ADD_VALUE))));
+        ITEMS.register("childish_brooch", () -> new AttributeCurioItem(new Item.Properties().stacksTo(1), (m) -> {
+            CuriosApi.addSlotModifier(m, "medal", ResourceLocation.fromNamespaceAndPath(MalumBuddycards.MOD_ID, "childish_brooch"), 2, AttributeModifier.Operation.ADD_VALUE);
+            CuriosApi.addSlotModifier(m, "belt", ResourceLocation.fromNamespaceAndPath(MalumBuddycards.MOD_ID, "childish_brooch"), -1, AttributeModifier.Operation.ADD_VALUE);
+        }));
+        ITEMS.register("triplicate_brooch", () -> new AttributeCurioItem(new Item.Properties().stacksTo(1), (m) -> {
+            CuriosApi.addSlotModifier(m, "medal", ResourceLocation.fromNamespaceAndPath(MalumBuddycards.MOD_ID, "triplicate_brooch"), 2, AttributeModifier.Operation.ADD_VALUE);
+            m.put(Attributes.MOVEMENT_SPEED, new AttributeModifier(ResourceLocation.fromNamespaceAndPath(MalumBuddycards.MOD_ID, "triplicate_brooch"), -0.04, AttributeModifier.Operation.ADD_VALUE));
+        }));
+
+        ITEMS.register("odd_puzzlebox", () -> new Item(new Item.Properties()));
+        ITEMS.register("rancid_sleeve", () -> new RancidSleeveItem(new Item.Properties(), new float[]{0.4f, 0.3f, 0.225f, 0.073f}));
 
         PACT_OF_SOUL_PACKING = GEAS.register("pact_of_soul_packing", () -> new GeasEffectType(SoulPackingGeas::new, SPIRIT));
         PACT_OF_THE_BULK_BOX = GEAS.register("pact_of_the_bulk_box", () -> new GeasEffectType(BulkBoxGeas::new, SPIRIT));
         PACT_OF_THE_RAINBOW = GEAS.register("pact_of_the_rainbow", () -> new GeasEffectType(RainbowGeas::new, SPIRIT, MalumSpiritTypes.INFERNAL_SPIRIT));
         PACT_OF_THE_PERFECTIONIST = GEAS.register("pact_of_the_perfectionist", () -> new GeasEffectType(PerfectionistGeas::new, SPIRIT, MalumSpiritTypes.ELDRITCH_SPIRIT));
 
+        SPIRITS.register(eventBus);
         ATTRIBUTES.register(eventBus);
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);
-        SPIRITS.register(eventBus);
         GEAS.register(eventBus);
     }
 

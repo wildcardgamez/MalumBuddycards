@@ -1,0 +1,32 @@
+{
+  "type": "malum:soul_binding",
+  "extraInputs": [
+    {
+      "count": 4,
+      "item": "buddycards:buddysteel_ingot"
+    },
+    {
+      "count": 4,
+      "item": "malum:astral_weave"
+    }
+  ],
+  "input": {
+    "count": 4,
+    "item": "malumbuddycards:buddycard_pack_malum"
+  },
+  "result": "malumbuddycards:pact_of_soul_packing",
+  "spirits": [
+    {
+      "type": "malumbuddycards:childish",
+      "count": 16
+    },
+    {
+      "type": "malum:wicked",
+      "count": 16
+    },
+    {
+      "type": "malum:aerial",
+      "count": 16
+    }
+  ]
+}

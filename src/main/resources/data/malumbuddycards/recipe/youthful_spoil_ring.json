@@ -1,0 +1,27 @@
+{
+  "type": "malum:spirit_infusion",
+  "extraInputs": [
+    {
+      "count": 8,
+      "item": "malum:refined_soulstone"
+    }
+  ],
+  "input": {
+    "count": 1,
+    "item": "malumbuddycards:childish_ring"
+  },
+  "result": {
+    "count": 1,
+    "id": "malumbuddycards:ring_of_youthful_spoil"
+  },
+  "spirits": [
+    {
+      "type": "malumbuddycards:childish",
+      "count": 16
+    },
+    {
+      "type": "malum:eldritch",
+      "count": 8
+    }
+  ]
+}

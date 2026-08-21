@@ -1,0 +1,27 @@
+{
+  "type": "malum:spirit_infusion",
+  "extraInputs": [
+    {
+      "count": 8,
+      "item": "buddycards:luminis"
+    },
+    {
+      "count": 4,
+      "item": "buddycards:zylex"
+    }
+  ],
+  "input": {
+    "count": 1,
+    "item": "malumbuddycards:childish_brooch"
+  },
+  "result": {
+    "count": 1,
+    "id": "malumbuddycards:gluttonous_brooch"
+  },
+  "spirits": [
+    {
+      "type": "malumbuddycards:childish",
+      "count": 32
+    }
+  ]
+}
