@@ -1,0 +1,27 @@
+{
+  "type": "malum:spirit_infusion",
+  "input": {
+    "item": "minecraft:paper",
+    "count": 6
+  },
+  "result": {
+    "id": "malumbuddycards:buddycard_pack_malum",
+    "count": 1
+  },
+  "extraInputs": [
+    {
+      "tag": "buddycards:buddycards",
+      "count": 4
+    }
+  ],
+  "spirits": [
+    {
+      "type": "malumbuddycards:childish",
+      "count": 8
+    },
+    {
+      "type": "malum:arcane",
+      "count": 4
+    }
+  ]
+}

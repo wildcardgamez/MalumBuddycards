@@ -16,7 +16,7 @@
   ],
   "input": {
     "count": 4,
-    "item": "buddycards:odd_puzzlebox"
+    "item": "malumbuddycards:odd_puzzlebox"
   },
   "result": "malumbuddycards:pact_of_the_perfectionist",
   "spirits": [
