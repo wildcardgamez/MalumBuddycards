@@ -59,7 +59,7 @@ public class MalumBuddycardsEvents {
                         System.out.println("roll" + r);
                         if (r < .1f)
                             spawner.setCustomItems(new ItemStack(BuddycardsItems.MYSTERY_PACK.get()));
-                        if (r < .6f)
+                        if (r < .4f)
                             spawner.setCustomItems(new ItemStack(RegistryHandler.PACK.get()));
                         else
                             spawner.setCustomItems(new ItemStack(RegistryHandler.SPIRIT_ITEM.get()));
@@ -116,7 +116,17 @@ public class MalumBuddycardsEvents {
                             .addPage(SpiritInfusionPage.fromOutput(RegistryHandler.RANCID_SLEEVE.get()))
             );
             GeasEntries.addBundledGeasEntry(event.getScreen(), "pacts_of_an_addicted_gambler", -7, -3, RegistryHandler.PACT_OF_SOUL_PACKING, RegistryHandler.PACT_OF_THE_BULK_BOX, RegistryHandler.PACT_OF_THE_RAINBOW, RegistryHandler.PACT_OF_THE_PERFECTIONIST);
-            TotemMagicEntries.addBundledRiteEntry(event.getScreen(), "childish_rites", -8, -2, RegistryHandler.RITE_OF_THE_LUCKY_RIP, RegistryHandler.RITE_OF_THE_BULK_BOON, RegistryHandler.RITE_OF_GRADE, RegistryHandler.RITE_OF_YOUTH, RegistryHandler.RUNE_OF_LUCKY_RIP, RegistryHandler.RUNE_OF_BULK_BOON);
+            //TotemMagicEntries.addBundledRiteEntry(event.getScreen(), "childish_rites", -8, -2, RegistryHandler.RITE_OF_THE_LUCKY_RIP, RegistryHandler.RITE_OF_THE_BULK_BOON, RegistryHandler.RITE_OF_GRADE, RegistryHandler.RITE_OF_YOUTH, RegistryHandler.RUNE_OF_LUCKY_RIP, RegistryHandler.RUNE_OF_BULK_BOON);
+            event.getScreen().addEntry("rune_of_lucky_rip", -9, -2, (b) ->
+                    b.configureWidget((w) -> w.setIcon(RegistryHandler.RUNE_OF_LUCKY_RIP).setDesign(WidgetDesignType.SMALL, WidgetDesignType.FrameType.RUNEWOOD, WidgetDesignType.FillingType.PAPER))
+                            .addPage(new HeadlineTextPage("rune_of_lucky_rip", "rune_of_lucky_rip"))
+                            .addPage(RuneworkingPage.fromOutput((RegistryHandler.RUNE_OF_LUCKY_RIP.get())))
+            );
+            event.getScreen().addEntry("rune_of_bulk_boon", -9, -3, (b) ->
+                    b.configureWidget((w) -> w.setIcon(RegistryHandler.RUNE_OF_BULK_BOON).setDesign(WidgetDesignType.SMALL, WidgetDesignType.FrameType.RUNEWOOD, WidgetDesignType.FillingType.PAPER))
+                            .addPage(new HeadlineTextPage("rune_of_bulk_boon", "rune_of_bulk_boon"))
+                            .addPage(RuneworkingPage.fromOutput((RegistryHandler.RUNE_OF_BULK_BOON.get())))
+            );
         } else if (event.getScreen() instanceof VoidProgressionScreen) {
             event.getScreen().addEntry("void.null_buddycard_pack", -3, -2, (b) ->
                     b.configureWidget((w) -> w.setIcon(RegistryHandler.NULL_PACK).setDesign(WidgetDesignType.DEFAULT, WidgetDesignType.FrameType.SOULWOOD, WidgetDesignType.FillingType.PAPER))
