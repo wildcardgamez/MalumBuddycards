@@ -51,12 +51,10 @@ public class MalumBuddycardsEvents {
             if (weapon.is(MalumTags.ItemTags.SOUL_SHATTER_CAPABLE_WEAPON) && event.getEntity() instanceof Monster entity && entity.isBaby()) {
                 SoulHarvestHandler.SpiritSpawner spawner = new SoulHarvestHandler.SpiritSpawner(entity).setPreferredCollector(source);
                 double childishSpoil = source.getAttributeValue(RegistryHandler.CHILDISH_SPOIL) - entity.getRandom().nextFloat();
-                System.out.println(childishSpoil);
                 boolean soulPacking = GeasEffectHandler.hasGeasEffect(source, RegistryHandler.PACT_OF_SOUL_PACKING);
                 while (childishSpoil > 0) {
                     if (soulPacking) {
                         float r = entity.getRandom().nextFloat();
-                        System.out.println("roll" + r);
                         if (r < .1f)
                             spawner.setCustomItems(new ItemStack(BuddycardsItems.MYSTERY_PACK.get()));
                         if (r < .4f)
