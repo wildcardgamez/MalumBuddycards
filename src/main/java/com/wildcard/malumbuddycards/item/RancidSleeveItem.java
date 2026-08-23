@@ -1,4 +1,4 @@
-package com.wildcard.malumbuddycards;
+package com.wildcard.malumbuddycards.item;
 
 import com.wildcard.buddycards.item.BuddycardItem;
 import com.wildcard.buddycards.item.GradingSleeveItem;

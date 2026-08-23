@@ -1,0 +1,43 @@
+{
+  "type": "malum:spirit_infusion",
+  "extraInputs": [
+    {
+      "count": 16,
+      "item": "malum:null_slate"
+    },
+    {
+      "count": 8,
+      "item": "malum:mnemonic_fragment"
+    },
+    {
+      "count": 1,
+      "item": "malumbuddycards:odd_puzzlebox"
+    }
+  ],
+  "input": {
+    "count": 1,
+    "item": "malumbuddycards:ring_of_youthful_spoils"
+  },
+  "result": {
+    "count": 1,
+    "id": "malumbuddycards:ring_of_manic_laughter"
+  },
+  "spirits": [
+    {
+      "type": "malumbuddycards:childish",
+      "count": 32
+    },
+    {
+      "type": "malum:arcane",
+      "count": 32
+    },
+    {
+      "type": "malum:wicked",
+      "count": 16
+    },
+    {
+      "type": "malum:eldritch",
+      "count": 16
+    }
+  ]
+}

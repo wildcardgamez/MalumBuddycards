@@ -17,7 +17,7 @@ public class PerfectionistGeas extends GeasEffect {
     public Multimap<Holder<Attribute>, AttributeModifier> createAttributeModifiers(LivingEntity entity, Multimap<Holder<Attribute>, AttributeModifier> modifiers) {
         this.addAttributeModifier(modifiers, BuddycardsAttributes.GRADING_BONUS, 2, AttributeModifier.Operation.ADD_VALUE);
         this.addAttributeModifier(modifiers, BuddycardsAttributes.GRADING_LUCK, 1, AttributeModifier.Operation.ADD_VALUE);
-        this.addAttributeModifier(modifiers, BuddycardsAttributes.BUDDY_BONUS, -3, AttributeModifier.Operation.ADD_VALUE);
+        this.addAttributeModifier(modifiers, BuddycardsAttributes.BUDDY_BONUS, -2, AttributeModifier.Operation.ADD_VALUE);
         return modifiers;
     }
 }

@@ -16,7 +16,7 @@ public class RainbowGeas extends GeasEffect {
 
     public Multimap<Holder<Attribute>, AttributeModifier> createAttributeModifiers(LivingEntity entity, Multimap<Holder<Attribute>, AttributeModifier> modifiers) {
         this.addAttributeModifier(modifiers, BuddycardsAttributes.FOIL_LUCK, 2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL);
-        this.addAttributeModifier(modifiers, BuddycardsAttributes.BUDDY_BONUS, -3, AttributeModifier.Operation.ADD_VALUE);
+        this.addAttributeModifier(modifiers, BuddycardsAttributes.BUDDY_BONUS, -2, AttributeModifier.Operation.ADD_VALUE);
         return modifiers;
     }
 }

@@ -3,6 +3,7 @@ package com.wildcard.malumbuddycards;
 import com.sammy.malum.common.data.component.GeasDataComponent;
 import com.sammy.malum.core.systems.geas.GeasEffectType;
 import com.sammy.malum.registry.common.MalumCreativeTabs;
+import com.sammy.malum.registry.common.MalumTags;
 import com.sammy.malum.registry.common.item.MalumDataComponents;
 import com.sammy.malum.registry.common.item.MalumItems;
 import com.sammy.malum.registry.common.magic.MalumGeasEffectTypes;
@@ -33,11 +34,11 @@ public class ClientEvents {
     public static void creativeTabSetup(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey().equals(BuddycardsMisc.MAIN_TAB.getKey())) {
             for (DeferredHolder<Item, ? extends Item> i : RegistryHandler.ITEMS.getEntries())
-                if(!(i.get() instanceof BuddycardItem))
+                if (!(i.get() instanceof BuddycardItem))
                     event.accept(i.get());
         } else if (event.getTabKey().equals(BuddycardsMisc.CARDS_TAB.getKey())) {
             for (DeferredHolder<Item, ? extends Item> i : RegistryHandler.ITEMS.getEntries())
-                if(i.get() instanceof BuddycardItem)
+                if(i.get() instanceof BuddycardItem card && card.shouldLoad())
                     event.accept(i.get());
         } else if (event.getTabKey().equals(MalumCreativeTabs.GEAS.getKey())) {
             for(DeferredHolder<GeasEffectType, ? extends GeasEffectType> geas : RegistryHandler.GEAS.getEntries()) {
@@ -47,6 +48,6 @@ public class ClientEvents {
     }
 
     public static void setupRenderers() {
-        CuriosRendererRegistry.register(RegistryHandler.MEDAL.get(), () -> new MedalRenderer("textures/models/medal/buddysteel_medal_create"));
+        CuriosRendererRegistry.register(RegistryHandler.MEDAL.get(), () -> new MedalRenderer("textures/models/medal/buddysteel_medal_malum"));
     }
 }

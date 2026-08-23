@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:leather"
+    },
+    {
+      "tag": "malumbuddycards:buddycards_null_malum"
+    },
+    {
+      "tag": "malumbuddycards:buddycards_null_malum"
+    },
+    {
+      "tag": "malumbuddycards:buddycards_null_malum"
+    }
+  ],
+  "result":
+  {
+    "id": "malumbuddycards:buddycard_binder_null_malum",
+    "count": 1
+  }
+}

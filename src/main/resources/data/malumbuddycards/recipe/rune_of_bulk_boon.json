@@ -1,0 +1,16 @@
+{
+  "type": "malum:runeworking",
+  "input": {
+    "count": 4,
+    "item": "malum:soulwood_planks"
+  },
+  "result": {
+    "count": 1,
+    "id": "malumbuddycards:rune_of_bulk_boon"
+  },
+  "secondaryInput": {
+    "count": 32,
+    "item": "malumbuddycards:childish_spirit"
+  },
+  "soundType": "malum:runic_workbench_shapes_wooden_rune"
+}

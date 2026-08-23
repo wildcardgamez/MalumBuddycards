@@ -1,6 +1,8 @@
 package com.wildcard.malumbuddycards;
 
 import com.google.common.collect.Multimap;
+import com.sammy.malum.registry.common.MalumAttributes;
+import com.wildcard.buddycards.Buddycards;
 import com.wildcard.buddycards.gear.IMedalTypes;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceLocation;
@@ -12,7 +14,10 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import java.util.Optional;
 
 public enum MedalTypes implements IMedalTypes {
-    MALUM_SET(null, null);
+    MALUM_SET(null, ((map, mod) -> {
+        map.put(RegistryHandler.CHILDISH_SPOIL, new AttributeModifier(ResourceLocation.fromNamespaceAndPath(Buddycards.MOD_ID, "buddysteel_medal_malum"), 0.25 * (mod + 1), AttributeModifier.Operation.ADD_VALUE));
+        map.put(MalumAttributes.SPIRIT_SPOILS, new AttributeModifier(ResourceLocation.fromNamespaceAndPath(Buddycards.MOD_ID, "buddysteel_medal_malum"), 0.25 * (mod + 1), AttributeModifier.Operation.ADD_VALUE));
+    }));
 
     MedalTypes(MedalTick effect, MedalAttributes attributes) {
         this.effect = Optional.ofNullable(effect);

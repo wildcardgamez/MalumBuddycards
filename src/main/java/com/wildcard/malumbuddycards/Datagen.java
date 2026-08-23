@@ -28,16 +28,17 @@ public class Datagen {
 
         @Override
         protected void registerModels() {
-            for (int i = 1; i <= 27; i++) {
+            for (int i = 1; i <= 27; i++)
                 genCardModel(i);
-            }
+            for (int i = 28; i <= 34; i++)
+                genNullCardModel(i);
             ItemModelBuilder medal = getBuilder(ModelProvider.ITEM_FOLDER + "/buddysteel_medal_malum")
                     .parent(factory.apply(ResourceLocation.withDefaultNamespace("item/generated")))
-                    .texture("layer0", ResourceLocation.fromNamespaceAndPath(MalumBuddycards.MOD_ID, ModelProvider.ITEM_FOLDER + "/malum" + "_set/" + "medal"));
+                    .texture("layer0", MalumBuddycards.malumBuddycardsLocation(ModelProvider.ITEM_FOLDER + "/malum" + "_set/" + "medal"));
             for (int i = 1; i < 5; i++) {
                 ItemModelBuilder tierMedal = getBuilder(ModelProvider.ITEM_FOLDER + "/buddysteel_medal_malum" + i)
                         .parent(factory.apply(ResourceLocation.withDefaultNamespace("item/generated")))
-                        .texture("layer0", ResourceLocation.fromNamespaceAndPath(MalumBuddycards.MOD_ID, ModelProvider.ITEM_FOLDER + "/malum" + "_set/" + "medal" + i));
+                        .texture("layer0", MalumBuddycards.malumBuddycardsLocation(ModelProvider.ITEM_FOLDER + "/malum" + "_set/" + "medal" + i));
                 medal.override().predicate(ResourceLocation.fromNamespaceAndPath(Buddycards.MOD_ID, "tier"), i).model(tierMedal);
             }
         }
@@ -45,7 +46,7 @@ public class Datagen {
         void genCardModel(int cardNum) {
             ItemModelBuilder card = getBuilder(ModelProvider.ITEM_FOLDER + "/buddycard_malum" + cardNum)
                     .parent(factory.apply(ResourceLocation.fromNamespaceAndPath(Buddycards.MOD_ID, ModelProvider.ITEM_FOLDER + "/buddycard")))
-                    .texture("layer0", ResourceLocation.fromNamespaceAndPath(MalumBuddycards.MOD_ID, ModelProvider.ITEM_FOLDER + "/malum_set/" + cardNum));
+                    .texture("layer0", MalumBuddycards.malumBuddycardsLocation(ModelProvider.ITEM_FOLDER + "/malum_set/" + cardNum));
             for (int i = 0; i <= 5; i++) {
                 for (int j = 0; j <= 3; j++)
                     if (j + i != 0)
@@ -56,9 +57,31 @@ public class Datagen {
         ModelFile genFoiledGradedCardModel(int cardNum, int grade, int foil) {
             ItemModelBuilder card = getBuilder(ModelProvider.ITEM_FOLDER + "/buddycard_malum" + cardNum + "_g" + grade + "_f" + foil)
                     .parent(factory.apply(ResourceLocation.fromNamespaceAndPath(Buddycards.MOD_ID, ModelProvider.ITEM_FOLDER + "/buddycard")))
-                    .texture("layer0", ResourceLocation.fromNamespaceAndPath(MalumBuddycards.MOD_ID, ModelProvider.ITEM_FOLDER + "/malum_set/" + cardNum));
+                    .texture("layer0", MalumBuddycards.malumBuddycardsLocation(ModelProvider.ITEM_FOLDER + "/malum_set/" + cardNum));
             if (foil != 0)
                 card.texture("layer1", ResourceLocation.fromNamespaceAndPath(Buddycards.MOD_ID,ModelProvider.ITEM_FOLDER + "/foil" + foil));
+            if (grade != 0)
+                card.texture(foil == 0 ? "layer1" : "layer2", ResourceLocation.fromNamespaceAndPath(Buddycards.MOD_ID,ModelProvider.ITEM_FOLDER + "/grade" + grade));
+            return card;
+        }
+
+        void genNullCardModel(int cardNum) {
+            ItemModelBuilder card = getBuilder(ModelProvider.ITEM_FOLDER + "/buddycard_malum" + cardNum)
+                    .parent(factory.apply(ResourceLocation.fromNamespaceAndPath(Buddycards.MOD_ID, ModelProvider.ITEM_FOLDER + "/buddycard")))
+                    .texture("layer0", MalumBuddycards.malumBuddycardsLocation(ModelProvider.ITEM_FOLDER + "/malum_set/" + cardNum));
+            for (int i = 0; i <= 5; i++) {
+                for (int j = 0; j <= 3; j++)
+                    if (j + i != 0)
+                        card.override().predicate(ResourceLocation.fromNamespaceAndPath(Buddycards.MOD_ID, "grade"), i).predicate(ResourceLocation.fromNamespaceAndPath(Buddycards.MOD_ID, "foil"), j).model(genNullFoiledGradedCardModel(cardNum, i, j));
+            }
+        }
+
+        ModelFile genNullFoiledGradedCardModel(int cardNum, int grade, int foil) {
+            ItemModelBuilder card = getBuilder(ModelProvider.ITEM_FOLDER + "/buddycard_malum" + cardNum + "_g" + grade + "_f" + foil)
+                    .parent(factory.apply(ResourceLocation.fromNamespaceAndPath(Buddycards.MOD_ID, ModelProvider.ITEM_FOLDER + "/buddycard")))
+                    .texture("layer0", MalumBuddycards.malumBuddycardsLocation(ModelProvider.ITEM_FOLDER + "/malum_set/" + cardNum));
+            if (foil != 0)
+                card.texture("layer1", MalumBuddycards.malumBuddycardsLocation(ModelProvider.ITEM_FOLDER + "/foil" + foil));
             if (grade != 0)
                 card.texture(foil == 0 ? "layer1" : "layer2", ResourceLocation.fromNamespaceAndPath(Buddycards.MOD_ID,ModelProvider.ITEM_FOLDER + "/grade" + grade));
             return card;

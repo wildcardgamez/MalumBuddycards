@@ -1,5 +1,6 @@
 package com.wildcard.malumbuddycards;
 
+import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
@@ -12,5 +13,9 @@ public class MalumBuddycards
     public MalumBuddycards(IEventBus eventBus, ModContainer modContainer)
     {
         RegistryHandler.registerAll(eventBus);
+    }
+
+    public static ResourceLocation malumBuddycardsLocation(String string) {
+        return ResourceLocation.fromNamespaceAndPath(MOD_ID, string);
     }
 }

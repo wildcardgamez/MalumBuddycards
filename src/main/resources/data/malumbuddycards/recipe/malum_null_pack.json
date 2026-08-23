@@ -1,0 +1,10 @@
+{
+  "type": "malum:void_favor",
+  "input": {
+    "item": "malumbuddycards:buddycard_pack_malum"
+  },
+  "result": {
+    "count": 1,
+    "id": "malumbuddycards:buddycard_pack_null_malum"
+  }
+}

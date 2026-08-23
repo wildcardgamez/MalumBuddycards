@@ -1,0 +1,16 @@
+{
+  "type": "malum:runeworking",
+  "input": {
+    "count": 4,
+    "item": "malum:null_slate"
+  },
+  "result": {
+    "count": 1,
+    "id": "malumbuddycards:rune_of_nostalgia"
+  },
+  "secondaryInput": {
+    "count": 16,
+    "item": "malumbuddycards:childish_spirit"
+  },
+  "soundType": "malum:runic_workbench_shapes_void_rune"
+}
