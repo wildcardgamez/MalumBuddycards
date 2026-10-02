@@ -106,11 +106,11 @@ public class RegistryHandler {
         VARNISHED_TERRACOTTA = BLOCKS.register("childish_varnished_terracotta", () -> new VarnishedTerracottaBlock(MalumBlockProperties.VARNISHED_TERRACOTTA(DyeColor.LIGHT_BLUE)));
 
         PACK = ITEMS.register("buddycard_pack_malum", MalumBuddycardPackItem::new);
-        BINDER = ITEMS.register("buddycard_binder_malum", () -> new BuddycardBinderItem(BuddycardsItems.DEFAULT_BINDER_PROPERTIES, MALUM_SET, MalumBuddycards.malumBuddycardsLocation("textures/gui/buddycard_binder_malum.png"), false));
-        LARGE_BINDER = ITEMS.register("large_buddycard_binder_malum", () -> new BuddycardBinderItem(BuddycardsItems.DEFAULT_BINDER_PROPERTIES, MALUM_SET, MalumBuddycards.malumBuddycardsLocation("textures/gui/large_buddycard_binder_malum.png"), true));
+        BINDER = ITEMS.register("buddycard_binder_malum", () -> new BuddycardBinderItem(BuddycardsItems.DEFAULT_BINDER_PROPERTIES.get(), MALUM_SET, MalumBuddycards.malumBuddycardsLocation("textures/gui/buddycard_binder_malum.png"), false));
+        LARGE_BINDER = ITEMS.register("large_buddycard_binder_malum", () -> new BuddycardBinderItem(BuddycardsItems.DEFAULT_BINDER_PROPERTIES.get(), MALUM_SET, MalumBuddycards.malumBuddycardsLocation("textures/gui/large_buddycard_binder_malum.png"), true));
         NULL_PACK = ITEMS.register("buddycard_pack_null_malum", MalumNullBuddycardPackItem::new);
-        NULL_BINDER = ITEMS.register("buddycard_binder_null_malum", () -> new MalumNullBuddycardBinderItem(BuddycardsItems.DEFAULT_BINDER_PROPERTIES, MALUM_SET, MalumBuddycards.malumBuddycardsLocation("textures/gui/buddycard_binder_null_malum.png"), false));
-        NULL_LARGE_BINDER = ITEMS.register("large_buddycard_binder_null_malum", () -> new MalumNullBuddycardBinderItem(BuddycardsItems.DEFAULT_BINDER_PROPERTIES, MALUM_SET, MalumBuddycards.malumBuddycardsLocation("textures/gui/large_buddycard_binder_null_malum.png"), true));
+        NULL_BINDER = ITEMS.register("buddycard_binder_null_malum", () -> new MalumNullBuddycardBinderItem(BuddycardsItems.DEFAULT_BINDER_PROPERTIES.get(), MALUM_SET, MalumBuddycards.malumBuddycardsLocation("textures/gui/buddycard_binder_null_malum.png"), false));
+        NULL_LARGE_BINDER = ITEMS.register("large_buddycard_binder_null_malum", () -> new MalumNullBuddycardBinderItem(BuddycardsItems.DEFAULT_BINDER_PROPERTIES.get(), MALUM_SET, MalumBuddycards.malumBuddycardsLocation("textures/gui/large_buddycard_binder_null_malum.png"), true));
         MEDAL = ITEMS.register("buddysteel_medal_malum", () -> new BuddysteelSetMedalItem(MedalTypes.MALUM_SET, MALUM_SET, new Item.Properties().stacksTo(1).component(BuddycardsComponents.COLLECTION_TIER, 0)));
 
         BOOSTER_BOX_ITEM = ITEMS.register("buddycard_booster_box_malum", () -> new BuddycardBoosterBoxItem(BOOSTER_BOX.get(), PACK, BuddycardsItems.DEFAULT_UNCOMMON_PROPERTIES));
